@@ -16,3 +16,4 @@ protobuf==3.5.2.post1
 pydot-ng==1.0.0
 tensorflow==1.4.0
 numpy==1.14.2
+fire==0.1.3
