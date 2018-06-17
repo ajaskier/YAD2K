@@ -7,8 +7,9 @@ from PIL import ImageDraw, ImageFont
 
 class BboxPainter:
 
-    def __init__(self, class_names):
+    def __init__(self, class_names, font_path):
         self.class_names = class_names
+        self.font_path = font_path
 
         # Generate colors for drawing bounding boxes.
         hsv_tuples = [(x / len(self.class_names), 1., 1.)
@@ -24,7 +25,7 @@ class BboxPainter:
 
     def apply_bboxes(self, image, boxes, scores, classes):
         font = ImageFont.truetype(
-            font='font/FiraMono-Medium.otf',
+            font=self.font_path,
             size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
         thickness = (image.size[0] + image.size[1]) // 300
 

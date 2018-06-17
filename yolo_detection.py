@@ -6,7 +6,7 @@ from PIL import Image
 from keras import backend as K
 from keras.models import load_model
 
-from yad2k.models.keras_yolo import yolo_head, yolo_eval
+from .yad2k.models.keras_yolo import yolo_head, yolo_eval
 
 
 class YoloDetector:
